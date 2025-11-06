@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="static/assets/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles/main.css" />
+  <title>Cyber Website</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+      <a href="#"><img src="/static/assets/logo.svg" alt="Cyber Logo" height="50px" /></a>
+      <h2>CyberEducation</h2>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#cia">CIA Triad</a></li>
+      <li><a href="#data">Data States</a></li>
+      <li><a href="#authentication">Authentication</a></li>
+      <li><a href="#passwords">Passwords</a></li>
+      <li><a href="#phishing">Phishing</a></li>
+      <li><a href="#social">Social Engineering</a></li>
+      <li><a href="#threats">Threats</a></li>
+    </ul>
+    <div class="btns">
+      <button class="btn">Stay Secure</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <canvas id="gridCanvas"></canvas>
+    <div class="hero-content">
+      <h1 id="main-text">Learn Cybersecurity Today</h1>
+      <p>
+        Explore how data moves, how passwords defend it, and how hackers
+        attack
+      </p>
+      <a href="#cia">
+        <button class="cta-btn">ENTER</button>
+      </a>
+    </div>
+  </section>
+
+  <!-- CIA Triad Section -->
+  <section class="cia-triad" id="cia">
+    <h1>CIA TRIAD</h1>
+    <h3>Click on each of the buttons</h3>
+
+    <div class="buttons-container">
+      <div class="buttons-wrapper">
+        <button class="triad-btn" id="confidentiality-btn">
+          Confidentiality
+        </button>
+        <button class="triad-btn" id="integrity-btn">Integrity</button>
+        <button class="triad-btn" id="availability-btn">Availability</button>
+      </div>
+      <img src="/static/assets/triad.png" alt="CIA Triad" class="triad-image" />
+      <div class="content-box" id="content-box">
+        <h3 id="content-header"></h3>
+        <p id="content-text"></p>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 1.5rem">See what each of these sliders does</h3>
+    <div class="sliders-container">
+      <div class="slider-text-box">
+        <p>
+          Adjust the sliders to see how they impact the overall security of
+          the system. Each slider represents one aspect of the CIA Triad.
+          Moving a slider will affect the other two, demonstrating the balance
+          required to maintain optimal security!
+        </p>
+      </div>
+
+      <div class="slider-item">
+        <input type="range" class="c-rng" min="0" max="100" step="1" value="50" data-range="circular" />
+        <label>Confidentiality</label>
+      </div>
+      <div class="slider-item">
+        <input type="range" class="c-rng" min="0" max="100" step="1" value="50" data-range="circular"
+          data-modifier="c-rng--tomato" />
+        <label>Integrity</label>
+      </div>
+      <div class="slider-item">
+        <input type="range" class="c-rng" min="0" max="100" step="1" value="50" data-range="circular"
+          data-modifier="c-rng--darkcyan" />
+        <label>Availability</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- Data States -->
+  <section class="data-states" id="data">
+    <h1>DATA STATES</h1>
+    <div class="data-states-content">
+      <div class="data-state">
+        <img src="/static/assets/at_rest.jpeg" alt="Data at Rest" />
+        <h2>Data at Rest</h2>
+        <p>
+          Data at rest is a term used to describe all data in computer storage
+          that is not currently being accessed or transferred. Examples of
+          data at rest might include vital corporate files stored on the hard
+          drive of an employee's computer, files on an External hard drive,
+          data left in a storage area network (SAN) or files on the servers of
+          an offsite backup service provider.
+        </p>
+      </div>
+      <div class="data-state">
+        <img src="/static/assets/in_transit.jpg" alt="Data in Transit" />
+        <h2>Data in Transit</h2>
+        <p>
+          Data in motion is data that is moving or being transferred between
+          locations within or between computer systems. Data in motion may be
+          moving within a computer system, over a wireless connection or along
+          a wired connection. Data in motion should be encrypted in order to
+          protect it from interception by hackers. Common forms of encryption
+          for data in motion include encrypting the data before it is
+          transmitted (while in a data at rest state) or encrypting the
+          passage along which the data is sent.
+        </p>
+      </div>
+      <div class="data-state">
+        <img src="/static/assets/in_use.webp" alt="Data in Use" />
+        <h2>Data in Use</h2>
+        <p>
+          Data in use is data that is currently being updated, processed,
+          accessed and read by a system. Because data in use is directly
+          accessible by one or more users, this is the state at which data is
+          most vulnerable to attacks and when encryption is the most
+          essential. Organizations protect data here by using encryption,
+          authentication, and managing permissions to certain data. Some
+          organizations also require an NDA (Non-Disclosure Agreement) to
+          further protect sensitive information.
+        </p>
+      </div>
+    </div>
+
+    <div class="real-world-examples">
+      <h2>Real World Examples</h2>
+      <div class="examples-grid">
+        <div class="example-item">
+          <h3>Data at Rest</h3>
+          <p>
+            Photos stored on your smartphone, documents saved on a USB drive,
+            or files backed up to cloud storage like Google Drive or iCloud.
+          </p>
+        </div>
+        <div class="example-item">
+          <h3>Data in Transit</h3>
+          <p>
+            Sending an email, streaming a video on Netflix, uploading a file
+            to Dropbox, or making a video call on Zoom.
+          </p>
+        </div>
+        <div class="example-item">
+          <h3>Data in Use</h3>
+          <p>
+            Editing a document in Microsoft Word, browsing social media,
+            entering your password to log in, or processing a payment on a
+            website.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="data-state-demo">
+      <div class="encrypt-section">
+        <h2>Encrypt a File</h2>
+        <form id="encrypt-form">
+          <input type="text" name="filepath" placeholder="Enter file path (e.g., C:\path\to\file.txt)" required />
+          <button type="submit">Encrypt File</button>
+        </form>
+        <div id="encrypt-result"></div>
+      </div>
+      <div class="decrypt-section">
+        <h2>Decrypt a File</h2>
+        <form id="decrypt-form">
+          <input type="text" name="filepath" placeholder="Enter file path to decrypt" required />
+          <button type="submit">Decrypt File</button>
+        </form>
+        <div id="decrypt-result"></div>
+      </div>
+    </div>
+    <div class="encryption-text-box">
+      <p>
+        You may be wondering, "How does this represent data states?" Data is represented in all three states here:
+      </p>
+      <ul>
+        <li><b>Data at rest:</b> When the user uploads a file, the website encrypts it and saves it locally. Once it is
+          saved locally, it becomes data that is in rest.</li>
+        <li><b>Data in transit:</b> When a user uploads a file, it travels from their browser to a server where it is
+          processed. The data is moving from one endpoint to another.</li>
+        <li><b>Data in use:</b> When the user requests the data to be decrypted, the server actively reads and decrypts
+          the cyphertext.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Authentication -->
+  <section class="authentication" id="authentication">
+    <h1>AUTHENTICATION</h1>
+    <h3>How can we prove you're you?</h3>
+    <div class="authentication-text-box">
+      <p>Generally, authentication is the process of verifying the identity of a user or system. It ensures that the
+        entity requesting access is indeed who or what it claims to be. Authentication can be split into three
+        categories:</p>
+    </div>
+    <div class="data-states-content">
+      <div class="data-state">
+        <img src="/static/assets/keycard.webp" alt="Something you have" />
+        <h2>Something You Have</h2>
+        <p>
+          This includes all items that are physical objects, such as keys, smart phones, smart cards, USB drives, and
+          token devices.
+        </p>
+      </div>
+      <div class="data-state">
+        <img src="/static/assets/password.avif" alt="Something you know" />
+        <h2>Something You Know</h2>
+        <p>
+          This includes passwords, PINs, combinations, code words, or secret handshakes. Anything that you can remember
+          and then type, say, do, perform, or otherwise recall when needed falls into this category.
+        </p>
+      </div>
+      <div class="data-state">
+        <img src="/static/assets/fingerprint.jpg" alt="Something you are" />
+        <h2>Something You Are</h2>
+        <p>
+          This includes any part of the human body that can be offered for verification, such as fingerprints, palm
+          scanning, facial recognition, retina scans, iris scans, and voice verification.
+        </p>
+      </div>
+      <div class="authentication-text-box">
+        <p>Why stick to just passwords? Many organizations use multi-factor authentication to enhance security by
+          combining two or more authentication methods. This means combining something you have, something you know, and
+          something you are. While it may be tempting to use the most secure methods available, some methods may be more
+          practical or user-friendly than others for different situations.</p>
+          <select name="select" aria-label="Select" class="auth-select" required id="auth-select">
+        <option selected disabled value="">Select</option>
+        <option value="mfa">Multi-factor authentication</option>
+        <option value="sso">Federated Single Sign-On</option>
+        <option value="fido2">FIDO2</option>
+        <option value="magic">Magic links / OTP</option>
+      </select>
+      </div>
+    </div>
+    <div class="auth-content-box" id="auth-content-box">
+      <h3 id="auth-content-header"></h3>
+      <div id="auth-content-table"></div>
+    </div>
+
+    <div class="signin-form">
+      <h3>Sign In</h3>
+      <form id="signin-form">
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required />
+        </div>
+        <button type="submit" class="signin-btn">Send OTP</button>
+      </form>
+
+      <div id="otp-section" style="display: none;">
+        <form id="otp-form">
+          <div class="form-group">
+            <label for="otp">Enter OTP</label>
+            <input type="text" id="otp" name="otp" placeholder="Enter 6-digit OTP" maxlength="6" pattern="[0-9]{6}" required />
+          </div>
+          <button type="submit" class="verify-btn">Verify OTP</button>
+        </form>
+      </div>
+
+      <div id="signin-result"></div>
+
+      <div class="slider-text-box">
+        <p>
+          Test out how OTP-based authentication works by signing in with your email. An OTP will be sent for you to enter and verify!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Passwords -->
+  <section class="passwords" id="passwords">
+    <h1>PASSWORDS</h1>
+    <h3>Weak passwords will leave you vulnerable to attacks</h3>
+    <div class="authentication-text-box">
+      <p>Passwords are the keys to safeguarding your digital and online life. They are your first line of defense. Knowing how to create and store strong passwords is one of the most critical aspects of everyday cybersecurity.</p>
+    </div>
+    <div class="password-panels">
+      <div class="password-left-box">
+      <h2>Password Guidelines for Maximum Security</h2>
+      <ol>
+        <li>
+          <strong>Long</strong>
+          <p>Passwords should be at least 16 characters long. The longer your password, the longer it takes for hackers to crack it using brute force techniques. Right now, an eight-character password can be guessed in minutes by automated tools; a 16-character password can take a billion years to guess!</p>
+        </li>
+        <li>
+          <strong>Unique</strong>
+          <p>Each account should have a unique password. Reusing passwords is common but risky. If one account is compromised, others become vulnerable. Small tweaks (adding a number or symbol) are often not enough; use entirely distinct passwords. A password manager can generate and store unique passwords for all your accounts.</p>
+        </li>
+        <li>
+          <strong>Complex</strong>
+          <p>Use a mix of uppercase and lowercase letters, numbers, and special characters (like @, !, $). Some platforms allow spaces. The strongest passwords are long, random strings rather than identifiable words, names, or dates, and they should still meet the 16+ character recommendation.</p>
+        </li>
+      </ol>
+      </div>
+      <div class="password-right-box">
+      <h2>Why you should use a password manager</h2>
+      <p>Our advice about unique, strong, and complex passwords probably seems overwhelming if you've never used a password manager before. However, modern services can help you breathe a lot easier. Your password manager will become your favorite tool as you navigate the digital world. With a password manager, you only need to remember one master password to unlock your secure vault of stored passwords.</p>
+
+      <h3>Benefits of using a password manager</h3>
+      <ul>
+        <li><strong>Convenience:</strong> No more struggling to remember dozens of passwords.</li>
+        <li><strong>Enhanced security:</strong> Automatically generate and store long, unique, and complex passwords.</li>
+        <li><strong>Time-saving:</strong> Browser extensions and smartphone apps autofill credentials for quick and secure logins.</li>
+        <li><strong>Safe vaults:</strong> High-quality password managers use encryption and zero-knowledge architecture, making them safer than notebooks, sticky notes, spreadsheets, or reusing passwords.</li>
+      </ul>
+      <img class="password-right-img" src="/static/assets/passman.png" alt="Password manager illustration" />
+    </div>
+    </div>
+    <div class="password-strength-checker">
+      <h2>Password Strength Calculator</h2>
+      <p>Enter a password to see how long it would take to crack using modern hardware:</p>
+      <div class="password-input-container">
+        <input type="password" id="password-check" placeholder="Enter a password to check">
+        <button class="show-password-btn" id="toggle-password">Show</button>
+      </div>
+      <div class="strength-result" id="strength-result">
+        <div class="entropy-score"></div>
+        <div class="crack-time"></div>
+        <div class="character-sets"></div>
+      </div>
+    </div>
+  </section>
+  <!-- Phishing Section -->
+  <section class="phishing" id="phishing">
+    <h1>PHISHING</h1>
+    <h3>Don't Take the Bait: Understanding Phishing Attacks</h3>
+    <div class="authentication-text-box">
+      <p>Phishing is a form of social engineering attack where attackers masquerade as legitimate entities to steal sensitive information. These attacks remain one of the most common and effective cyber threats today.</p>
+    </div>
+
+    <div class="phishing-grid">
+      <div class="phishing-card">
+        <h2>Common Types of Phishing</h2>
+        <ul>
+          <li><strong>Email Phishing:</strong> Mass-sent emails impersonating legitimate companies</li>
+          <li><strong>Spear Phishing:</strong> Targeted attacks using personal information</li>
+          <li><strong>Whaling:</strong> Targeting high-profile executives or officials</li>
+          <li><strong>Smishing:</strong> Phishing through SMS text messages</li>
+          <li><strong>Vishing:</strong> Voice calls attempting to gather information</li>
+        </ul>
+      </div>
+
+      <div class="phishing-card">
+        <h2>Warning Signs</h2>
+        <ul>
+          <li>Urgent or threatening language</li>
+          <li>Requests for sensitive information</li>
+          <li>Misspellings and grammar errors</li>
+          <li>Mismatched or suspicious URLs</li>
+          <li>Generic greetings ("Dear Sir/Madam")</li>
+          <li>Offers that seem too good to be true</li>
+          <li>Unexpected attachments</li>
+        </ul>
+      </div>
+
+      <div class="phishing-card">
+        <h2>Protection Strategies</h2>
+        <ul>
+          <li>Never click suspicious links or download unexpected attachments</li>
+          <li>Verify sender addresses carefully</li>
+          <li>Use multi-factor authentication</li>
+          <li>Keep software and systems updated</li>
+          <li>Report suspicious emails to IT security</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phishing-examples">
+      <h2>Real-World Examples</h2>
+      <div class="example-cards">
+        <div class="example-card">
+          <h3>AOHell</h3>
+          <p>Back in early 1994, a malicious program called AOHell was developed by a Pennsylvania teenager and was intended to crack America Online (AOL) accounts.</p> <br>
+          <p>Among other things, the program ran on top of the AOL client, stealing user's passwords and using the program's credit card generator to create fake accounts, which they would then use to impersonate AOL customer service. Regular users were asked to verify their accounts for security purposes, making this arguably the earliest form of phishing.</p>
+        </div>
+
+        <div class="example-card">
+          <h3>RSA</h3>
+          <p>In 2011, the United States' defense suppliers were breached when security firm RSA fell victim to spear phishing due to an Adobe Flash vulnerability.</p><br>
+          <p>Disguised as recruitment plans for that year, the email targeted mid-level employees with just one line of text: "I forward this file to you for review. Please open and view it.". Only one employee had to open the email for phishers to gain backdoor access on the victim's desktop. The phishers then managed to bypass the company's SecurID two-factor authentication to steal company data.</p>
+        </div>
+
+        <div class="example-card">
+          <h3>2018 World Cup</h3>
+          <p>The Federal Trade Commission released this statement regarding phishing attempts during the 2018 World Cup in Russia. The scam claimed the victim won tickets to the World Cup through a lottery and prompted them to enter their personal information to claim the prize.</p>
+          <br><p>At the same time, a handful of rental scams were reported as well. Cybercriminals stole the email addresses of genuine landlords in Russia and offered ridiculously low prices for their properties during the sporting event. Once a "lucky buyer" accepted the offer, his or her credit card information was stolen.</p>
+        </div>
+      </div>
+    </div>
+    <div class="authentication-text-box" style="margin-top: 2rem;">
+      <p style="margin-bottom: 0%;">Ready to test your phishing detection skills? Take Google's Phishing Quiz:</p>
+      <a href="https://phishingquiz.withgoogle.com/" target="_blank" style="display: inline-block; margin-top: 1rem; text-decoration: none;">
+        <button class="cta-btn">Take the Phishing Quiz</button>
+      </a>
+    </div>
+  </section>
+
+  <!-- Social Engineering Section -->
+  <section class="social-engineering" id="social">
+    <h1>SOCIAL ENGINEERING</h1>
+    <h3>Manipulating the Human Element</h3>
+    <div class="authentication-text-box">
+      <p>Social engineering attacks manipulate people into sharing information that they shouldn't share, downloading software that they shouldn't download, visiting websites they shouldn't visit, sending money to criminals or making other mistakes that compromise their personal or organizational security. Because social engineering uses psychological manipulation and exploits human error or weakness rather than technical vulnerabilities, it is sometimes called "human hacking".</p>
+    </div>
+
+    <div class="phishing-grid">
+      <div class="phishing-card">
+        <h2>Why It Works</h2>
+        <ul>
+          <li><strong>Posing as Trusted Brands:</strong> Scammers impersonate companies you know and trust</li>
+          <li><strong>Authority Figures:</strong> Messages appear from government agencies like the FBI or IRS</li>
+          <li><strong>Fear & Urgency:</strong> People act rashly when scared or hurried</li>
+          <li><strong>Greed:</strong> Promises of financial rewards or prizes</li>
+          <li><strong>Helpfulness:</strong> Appeals to your better nature and curiosity</li>
+        </ul>
+      </div>
+
+      <div class="phishing-card">
+        <h2>Common Attack Types</h2>
+        <ul>
+          <li><strong>Baiting:</strong> Tempting victims with valuable offers or objects</li>
+          <li><strong>Tailgating:</strong> Following authorized persons into restricted areas</li>
+          <li><strong>Pretexting:</strong> Creating fake situations to extract information</li>
+          <li><strong>Scareware:</strong> Fake warnings to manipulate users</li>
+          <li><strong>Watering Hole:</strong> Injecting malicious code into trusted websites</li>
+        </ul>
+      </div>
+
+      <div class="phishing-card">
+        <h2>Defense Strategies</h2>
+        <ul>
+          <li>Security awareness training for all employees</li>
+          <li>Implement access control policies and MFA</li>
+          <li>Use spam filters and email gateways</li>
+          <li>Keep systems updated with latest patches</li>
+          <li>Deploy EDR/XDR detection solutions</li>
+          <li>Verify requests through separate channels</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="real-world-examples">
+      <h2>Why Social Engineering Is So Dangerous</h2>
+      <div class="authentication-text-box" style="margin-top: 1rem;">
+        <p>Social engineering is attractive to cybercriminals because it enables them to access digital networks, devices and accounts without having to do the difficult technical work of getting around firewalls, antivirus software and other cybersecurity controls.</p>
+        <p>According to ISACA's State of Cybersecurity 2022 report, social engineering is the <strong>leading cause of network compromise today</strong>. IBM's Cost of a Data Breach report found that breaches caused by social engineering tactics were among the most costly, and phishing is the leading malware infection vector, identified in 41% of all incidents.</p>
+        <p>In a larger organization, it takes just one employee's mistake to compromise the integrity of the entire enterprise network. This is why security awareness training combined with robust cybersecurity policies is essential for every organization.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Threats Section -->
+  <section class="threats" id="threats">
+    <h1>CYBER THREATS</h1>
+    <h3>Understanding Common Attack Vectors</h3>
+    
+    <div class="authentication-text-box">
+      <p>Cyber threats change at a rapid pace. Tactics and attack methods are changing and improving daily. Cybercriminals access computers or network servers to cause harm using several paths, also called attack vectors.</p>
+    </div>
+
+    <div class="threats-intro">
+      <h2>Common Attack Vectors</h2>
+      <div class="attack-vectors">
+        <div class="vector-item">Removable media such as flash drives</div>
+        <div class="vector-item">Brute force attacks using trial and error to decode encrypted data</div>
+        <div class="vector-item">Web or email attacks</div>
+        <div class="vector-item">Unauthorized use of system privileges</div>
+        <div class="vector-item">Loss or theft of devices containing confidential information</div>
+      </div>
+    </div>
+
+    <div class="threats-grid">
+      <div class="threat-card">
+        <div class="threat-header">
+          <h2>Malware</h2>
+        </div>
+        <div class="threat-content">
+          <p>Malware is a program inserted into a system to compromise the confidentiality, integrity, or availability of data. It affects your data, applications, or operating system secretly and has become one of the most significant external threats to systems.</p>
+        </div>
+      </div>
+
+      <div class="threat-card">
+        <div class="threat-header">
+          <h2>Ransomware</h2>
+        </div>
+        <div class="threat-content">
+          <p>Ransomware prevents or limits users from accessing their system via malware, asking you to pay a ransom using online payment methods (usually virtual currencies like bitcoins) to regain access. It encrypts files using public-key encryption, with the decryption key staying on the criminal's server.</p>
+        </div>
+      </div>
+
+      <div class="threat-card">
+        <div class="threat-header">
+          <h2>DDoS Attacks</h2>
+        </div>
+        <div class="threat-content">
+          <p>Distributed Denial of Service attacks make an online service unavailable by overwhelming it with excessive traffic from many locations and sources. Cybercriminals develop large networks of infected computers called Botnets. A DDoS attack may create a distraction while other types of fraud and cyber intrusion are attempted.</p>
+        </div>
+      </div>
+
+      <div class="threat-card">
+        <div class="threat-header">
+          <h2>Spam & Phishing</h2>
+        </div>
+        <div class="threat-content">
+          <p>Spam includes unwanted, unsolicited, or undesirable messages and emails. Phishing attempts appear to be from a trustworthy person or business, with cybercriminals pretending to be official representatives sending warnings about your account. The message format typically appears legitimate using proper logos and names.</p>
+        </div>
+      </div>
+
+      <div class="threat-card">
+        <div class="threat-header">
+          <h2>Corporate Account Takeover (CATO)</h2>
+        </div>
+        <div class="threat-content">
+          <p>CATO is a business entity theft where cyber thieves impersonate the business and send unauthorized wire and ACH transactions to accounts controlled by criminals. Businesses with weak computer safeguards and minimal controls over online banking systems are easy targets.</p>
+        </div>
+      </div>
+
+      <div class="threat-card">
+        <div class="threat-header">
+          <h2>ATM Cash Out</h2>
+        </div>
+        <div class="threat-content">
+          <p>ATM Cash Out is large-dollar value ATM fraud involving simultaneous large cash withdrawals from several ATMs in many regions. The attack involves changing ATM settings to "Unlimited Operations," allowing withdrawal of funds over the customer's account balance or beyond the ATM's cash limit.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="real-world-examples">
+      <h2>Key Takeaway</h2>
+      <div class="authentication-text-box" style="margin-top: 1rem;">
+        <p>All organizations should develop detailed cybersecurity policies to deter attacks. This includes implementing strong access controls, regular security training, keeping systems updated, and having incident response plans in place. The landscape of cyber threats is constantly evolving, making continuous vigilance and adaptation essential for protecting digital assets and sensitive information.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <h3>Sources & References</h3>
+      <div class="footer-links">
+        <a href="https://www.threatscape.com/cyber-security-blog/understanding-the-cia-triad-in-cyber-security/" target="_blank" rel="noopener noreferrer">Threatscape</a>
+        <a href="https://www.racksolutions.com/news/blog/what-is-a-server/?srsltid=AfmBOopFMSE9IS3bm7raRCl2ualLNlc98ZX7XIq7lT8x43SpyQtWYUGQ" target="_blank" rel="noopener noreferrer">Rack Solutions</a>
+        <a href="https://www.bcsconsultants.com/blog/basic-elements-of-a-fiber-optic-communication-system/" target="_blank" rel="noopener noreferrer">BCS Consultants</a>
+        <a href="https://www.thespreadsheetguru.com/sample-data/" target="_blank" rel="noopener noreferrer">The Spreadsheet Guru</a>
+        <a href="https://www.ncsc.gov.uk/guidance/authentication-methods-choosing-the-right-type" target="_blank" rel="noopener noreferrer">National Cyber Security Centre</a>
+        <a href="https://www.globalknowledge.com/us-en/resources/resource-library/articles/the-three-types-of-multi-factor-authentication-mfa/#gref" target="_blank" rel="noopener noreferrer">Global Knowledge</a>
+        <a href="https://www.science.org/content/article/fingerprints-change-over-time-not-enough-foil-forensics" target="_blank" rel="noopener noreferrer">Science</a>
+        <a href="https://www.staysafeonline.org/articles/password-managers" target="_blank" rel="noopener noreferrer">NSA</a>
+        <a href="https://www.gensecurity.com/blog/advantages-of-a-keycard-entry-system" target="_blank" rel="noopener noreferrer">General Security</a>
+        <a href="https://www.staysafeonline.org/articles/passwords" target="_blank" rel="noopener noreferrer">NSA</a>
+        <a href="https://proton.me/blog/proton-pass-beta" target="_blank" rel="noopener noreferrer">Proton</a>
+        <a href="https://auth0.com/blog/defending-against-password-cracking-understanding-the-math/" target="_blank" rel="noopener noreferrer">Auth0</a>
+        <a href="https://support.microsoft.com/en-us/windows/protect-yourself-from-phishing-0c7ea947-ba98-3bd9-7184-430e1f860a44" target="_blank" rel="noopener noreferrer">Microsoft</a>
+        <a href="https://www.hempsteadny.gov/635/Famous-Phishing-Incidents-from-History" target="_blank" rel="noopener noreferrer">Hempstead</a>
+        <a href="https://phishingquiz.withgoogle.com/" target="_blank" rel="noopener noreferrer">Google Phishing Quiz</a>
+        <a href="https://www.mass.gov/info-details/know-the-types-of-cyber-threats" target="_blank" rel="noopener noreferrer">Massachusetts Government</a>
+      </div>
+    </div>
+  </footer>
+  <script src="/static/scripts/main.js"></script>
+</body>
+
+</html>
